@@ -77,8 +77,13 @@ WSGI_APPLICATION = 'arbituary.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'obituary_platform',
+        'USER': 'root',
+        'PASSWORD': '1234218@Nanjila22',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
