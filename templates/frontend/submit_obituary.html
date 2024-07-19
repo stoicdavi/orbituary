@@ -4,7 +4,7 @@
 
     
         <div class="flex justify-center w">
-            <form method="POST" action="{% url 'add' %}" id="obituaryForm" class="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+            <form method="POST" action="{% url 'add_obituary' %}" id="obituaryForm" class="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
                 {% csrf_token %}
                 <div class="mb-4">
                     <label for="name" class="block text-gray-700">Name:</label>
