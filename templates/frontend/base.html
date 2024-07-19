@@ -21,10 +21,10 @@
             <div :class="{'hidden': !isOpen, 'block': isOpen}" class="w-full lg:flex lg:w-auto lg:block">
                 <ul class="flex flex-col lg:flex-row lg:ml-6">
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-gray-700 hover:text-gray-900" href="#">Home</a>
+                        <a class="nav-link text-gray-700 hover:text-gray-900" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-gray-700 hover:text-gray-900" href="#">About</a>
+                        <a class="nav-link text-gray-700 hover:text-gray-900" href="{% url 'add' %}">Submit an Orbituary</a>
                     </li>
                     <li class="nav-item mx-3">
                         <a class="nav-link text-gray-700 hover:text-gray-900" href="#">Contact</a>

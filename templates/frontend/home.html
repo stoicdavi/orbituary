@@ -1,29 +1,51 @@
 {% extends 'frontend/base.html' %}
-
-{% block title %} Home {% endblock %}
-
+{% block title %}Home{% endblock %}
 {% block content %}
 <body>
     <div class="container mx-auto px-4 py-2">
-        <h1 class="text-3xl font-bold mt-4 text-center">Welcome to Orbutuaries</h1>
-        <div class="container mx-auto flex flex-wrap justify-between">
-            <div class="w-full sm:w-1/2 md:w-1/4 p-2">
-                <img src="https://via.placeholder.com/300" alt="placeholder" class="rounded-lg">
-                <p>Hello here</p>
-            </div>
-            <div class="w-full sm:w-1/2 md:w-1/4 p-2">
-                <img src="https://via.placeholder.com/300" alt="placeholder" class="rounded-lg">
-                <p>Hello here</p>
-            </div>
-            <div class="w-full sm:w-1/2 md:w-1/4 p-2">
-                <img src="https://via.placeholder.com/300" alt="placeholder" class="rounded-lg">
-                <p>Hello here</p>
-            </div>
-            <div class="w-full sm:w-1/2 md:w-1/4 p-2">
-                <img src="https://via.placeholder.com/300" alt="placeholder" class="rounded-lg">
-                <p>Hello here</p>
-            </div>
-        </div>
+        <h1 class="text-3xl font-bold mt-4 text-center">Welcome to Obituaries</h1>
+        <table class="min-w-full divide-y divide-gray-200 mt-4">
+            <thead>
+                <tr>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Image
+                    </th>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Name
+                    </th>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Dates
+                    </th>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Location
+                    </th>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Description
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+                {% for obituary in obituaries %}
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <img class="w-32 h-32 object-cover" src="{{ obituary.image.url }}" alt="{{ obituary.name }}">
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm font-medium text-gray-900">{{ obituary.name }}</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm text-gray-900">{{ obituary.date_of_birth }} - {{ obituary.date_of_death }}</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm text-gray-900">{{ obituary.location }}</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm text-gray-900">{{ obituary.description }}</div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </body>
-   
 {% endblock %}
