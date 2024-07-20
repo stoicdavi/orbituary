@@ -5,12 +5,16 @@
 - javascript
 - html
   # to test the project
- - git clone
  -  create a virtual environment as follows
  -  python -m venv env
- - activate the virtual ens using   env\Scripts\activate
- - install the dependencies as follows   pip install Django
+ - activate the virtual env using   env\Scripts\activate
+ - git clone https://github.com/stoicdavi/orbituary.git
+ - cd orbituraty
+
+ - install the dependencies as follows pip install django
  - pip install mysqlclient
+ - update the settings file with the name of your DB and password
+ - start run the project using python manage.py runserver
 ## Features
 - allow a user to add an obituary
 - allow users to view obituaries
