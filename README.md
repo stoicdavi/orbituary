@@ -4,6 +4,7 @@
 - tailwind css
 - javascript
 - html
+- MySQL workbench
   # to test the project
  -  create a virtual environment as follows
  -  python -m venv env
